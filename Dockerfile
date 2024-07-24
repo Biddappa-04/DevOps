@@ -1,5 +1,5 @@
-FROM openjdk
+FROM python
 WORKDIR /app
 COPY . /app
-RUN javac two.java
-CMD ["java","two"]
+RUN pip install --no-cache-dir -r requirements.txt
+CMD ["python","app.py"]
